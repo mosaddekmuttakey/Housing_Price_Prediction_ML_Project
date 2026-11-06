@@ -1,0 +1,49 @@
+{
+  "project": "California Housing Price Prediction",
+  "audit_type": "saved_artifact_verification",
+  "audit_date": "2026-11-06",
+  "artifact_audit_status": "passed_with_version_compatibility_warning",
+  "runtime_environment": {
+    "python": "3.13.5",
+    "scikit_learn": "1.8.0"
+  },
+  "model_training_scikit_learn_version": "1.9.0",
+  "checks": {
+    "source_archive_integrity": "passed",
+    "dataset_sha256_matches_metadata": true,
+    "notebook_schema_validation": "passed",
+    "notebook_code_cells": 35,
+    "generic_python3_kernel_configured": true,
+    "saved_model_load_and_holdout_prediction": "passed",
+    "recomputed_metrics_match_model_metadata": true,
+    "exported_prediction_csv_matches_deterministic_test_split": true,
+    "sample_prediction_matches_saved_test_result": true,
+    "visualization_png_count": 14,
+    "all_visualizations_300_dpi": true,
+    "python_cache_removed": false,
+    "gitignore_added": true,
+    "reusable_verification_script": "passed",
+    "full_notebook_reexecution": "not_completed_in_audit_environment"
+  },
+  "recomputed_metrics_from_prediction_csv": {
+    "MAE": 30100.081882963394,
+    "MSE": 2064896520.0026605,
+    "RMSE": 45441.13246831179,
+    "R2 Score": 0.8424235063793146
+  },
+  "model_metadata_metrics": {
+    "MAE": 30100.081882963394,
+    "MSE": 2064896520.0026605,
+    "RMSE": 45441.13246831179,
+    "R2 Score": 0.8424235063793146
+  },
+  "model_load_compatibility": {
+    "status": "prediction_test_passed_with_version_warning",
+    "training_version": "1.9.0",
+    "audit_runtime_version": "1.8.0",
+    "note": "The saved model was trained with scikit-learn 1.9.0; this audit runtime uses 1.8.0. The model loaded and reproduced the saved metrics, but scikit-learn emitted InconsistentVersionWarning messages. Use the pinned training version for normal use."
+  },
+  "notebook_execution_note": "The complete notebook was not rerun during this artifact audit. The saved model, metadata, dataset hash, prediction CSV, notebook schema, and visualization files were checked independently. Run the notebook with the pinned requirements to regenerate all outputs together.",
+  "verification_script_output": "PASS: Dataset SHA-256 matches model metadata.\nPASS: Saved model loaded and predicted the held-out test split.\nPASS: Recomputed metrics match model metadata.\nPASS: Exported prediction CSV matches model predictions.\nTraining scikit-learn version: 1.9.0\nCurrent scikit-learn version:  1.8.0\nWARNING: scikit-learn versions differ. Install the exact version listed in requirements.txt before relying on the serialized model.\nVisualization PNG files found: 14\nRecomputed metrics:\n  MAE: 30,100.081883\n  MSE: 2,064,896,520.002661\n  RMSE: 45,441.132468\n  R2 Score: 0.842424",
+  "verification_script_error": "ations\n  warnings.warn(\n/opt/pyvenv/lib/python3.13/site-packages/sklearn/base.py:463: InconsistentVersionWarning: Trying to unpickle estimator Pipeline from version 1.9.0 when using version 1.8.0. This might lead to breaking code or invalid results. Use at your own risk. For more info please refer to:\nhttps://scikit-learn.org/stable/model_persistence.html#security-maintainability-limitations\n  warnings.warn(\n/opt/pyvenv/lib/python3.13/site-packages/sklearn/base.py:463: InconsistentVersionWarning: Trying to unpickle estimator OneHotEncoder from version 1.9.0 when using version 1.8.0. This might lead to breaking code or invalid results. Use at your own risk. For more info please refer to:\nhttps://scikit-learn.org/stable/model_persistence.html#security-maintainability-limitations\n  warnings.warn(\n/opt/pyvenv/lib/python3.13/site-packages/sklearn/base.py:463: InconsistentVersionWarning: Trying to unpickle estimator ColumnTransformer from version 1.9.0 when using version 1.8.0. This might lead to breaking code or invalid results. Use at your own risk. For more info please refer to:\nhttps://scikit-learn.org/stable/model_persistence.html#security-maintainability-limitations\n  warnings.warn(\n/opt/pyvenv/lib/python3.13/site-packages/sklearn/base.py:463: InconsistentVersionWarning: Trying to unpickle estimator _BinMapper from version 1.9.0 when using version 1.8.0. This might lead to breaking code or invalid results. Use at your own risk. For more info please refer to:\nhttps://scikit-learn.org/stable/model_persistence.html#security-maintainability-limitations\n  warnings.warn(\n/opt/pyvenv/lib/python3.13/site-packages/sklearn/base.py:463: InconsistentVersionWarning: Trying to unpickle estimator HistGradientBoostingRegressor from version 1.9.0 when using version 1.8.0. This might lead to breaking code or invalid results. Use at your own risk. For more info please refer to:\nhttps://scikit-learn.org/stable/model_persistence.html#security-maintainability-limitations\n  warnings.warn("
+}

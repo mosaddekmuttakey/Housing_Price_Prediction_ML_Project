@@ -1,0 +1,73 @@
+NOTE: The cell-by-cell entries below are the historical execution log included with the source project.
+The complete notebook was not rerun during the 2026-11-06 artifact audit. See verification_report.json for the current audit results.
+
+RUN CELL 2: from pathlib import Path
+PASSED CELL 2
+RUN CELL 4: def save_figure(fig, filename):
+PASSED CELL 4
+RUN CELL 6: df = pd.read_csv(DATA_PATH)
+PASSED CELL 6
+RUN CELL 8: print("Last five rows:")
+PASSED CELL 8
+RUN CELL 9: missing_summary = pd.DataFrame({
+PASSED CELL 9
+RUN CELL 11: # Plot distributions for all numerical columns.
+PASSED CELL 11
+RUN CELL 12: # Examine the target variable's distribution.
+PASSED CELL 12
+RUN CELL 13: # Show the number of records in each ocean-proximity category.
+PASSED CELL 13
+RUN CELL 14: # Calculate correlations for numerical columns only.
+PASSED CELL 14
+RUN CELL 15: # Explore the relationship between median income and house value.
+PASSED CELL 15
+RUN CELL 16: # Compare house-value distributions across ocean-proximity groups.
+PASSED CELL 16
+RUN CELL 17: # Inspect potential outliers in the original numerical predictors.
+PASSED CELL 17
+RUN CELL 18: # Visualize the geographical distribution of house values.
+PASSED CELL 18
+RUN CELL 20: # Separate the raw predictors and target before splitting the data.
+PASSED CELL 20
+RUN CELL 22: X_train, X_test, y_train, y_test = train_test_split(
+PASSED CELL 22
+RUN CELL 24: def build_preprocessor():
+PASSED CELL 24
+RUN CELL 26: regression_models = {
+PASSED CELL 26
+RUN CELL 27: # Fit each complete pipeline and calculate the original regression metrics.
+PASSED CELL 27
+RUN CELL 28: # Rank the models by R2 score, from highest to lowest.
+PASSED CELL 28
+RUN CELL 29: # Compare baseline R2 scores for all five regression models.
+PASSED CELL 29
+RUN CELL 31: best_baseline_row = results_df.iloc[0]
+PASSED CELL 31
+RUN CELL 32: # Plot actual versus predicted values for the best baseline model.
+PASSED CELL 32
+RUN CELL 34: hist_pipeline = build_model_pipeline(
+PASSED CELL 34
+RUN CELL 35: print("Best hyperparameters:")
+PASSED CELL 35
+RUN CELL 37: best_pipeline = random_search.best_estimator_
+PASSED CELL 37
+RUN CELL 38: # Compare the original HistGradientBoosting baseline with the tuned pipeline.
+PASSED CELL 38
+RUN CELL 39: # Visualize the R2 score before and after tuning.
+PASSED CELL 39
+RUN CELL 40: # Check how closely the tuned model's predictions match actual house values.
+PASSED CELL 40
+RUN CELL 41: # Residuals are actual values minus predicted values.
+PASSED CELL 41
+RUN CELL 43: # Apply the already-fitted feature engineering and preprocessing steps to test data.
+PASSED CELL 43
+RUN CELL 44: # Plot the 15 most influential transformed features.
+PASSED CELL 44
+RUN CELL 46: final_results = pd.DataFrame(
+PASSED CELL 46
+RUN CELL 48: MODEL_PATH = MODEL_DIR / "Housing_Price_Prediction_System.pkl"
+PASSED CELL 48
+RUN CELL 50: loaded_model = joblib.load(MODEL_PATH)
+PASSED CELL 50
+RUN CELL 52: def predict_house_price(data):
+PASSED CELL 52
